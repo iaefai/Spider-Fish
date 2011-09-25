@@ -40,7 +40,7 @@ Windows: ~ will be assumed to be your user directory.
 	4. git clone https://github.com/LaurentGomila/SFML.git
 	5. mkdir build-SFML
 	6. cd build-SFML
-	7. cmake -G "NMake Makefiles" ../SFML
+	7. cmake -G "NMake Makefiles" ..\SFML
 	8. nmake
 	9. nmake install
 
