@@ -5,8 +5,10 @@
 #include <SFML/Graphics.hpp>
 #include <map>
 #include <cmath>
+#include <iostream>
 
 #include "resources.h"
+
 
 
 void DisplayError();
@@ -80,6 +82,7 @@ private :
 ////////////////////////////////////////////////////////////
 int main()
 {
+	std::cout << "Shader is starting." << std::endl;
     // Check that the system can use shaders
     if (sf::Shader::IsAvailable() == false)
     {
@@ -95,6 +98,7 @@ int main()
     if (!texture.Create(window.GetWidth(), window.GetHeight()))
         return EXIT_FAILURE;
 
+	std::cout << "Attempting to load: " << resourcePathFor("background.jpg") << std::endl;
     // Load a background texture to display
     sf::Texture backgroundTexture;
     if (!backgroundTexture.LoadFromFile(resourcePathFor("background.jpg")))
