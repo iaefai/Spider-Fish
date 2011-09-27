@@ -1,3 +1,4 @@
+# On Windows:  c:\Users\drakej\source\build-Spider-Fish>cmake -G "NMake Makefiles" -D SFMLDIR:String="C:\Program Files\SFML" ..\Spider-Fish
 cmake_minimum_required(VERSION 2.8)
 
 PROJECT(Spider-Fish)
@@ -8,6 +9,11 @@ FIND_PACKAGE(SFML REQUIRED)
 
 IF (WIN32)
     # Windows
+	
+	link_directories(${SFML_INCLUDE_DIR}/../lib)
+	
+	set(RESOURCE_HANDLER ${CMAKE_CURRENT_SOURCE_DIR}/src/windows/resources.cpp)
+#	link_directories(${FIND_SFML_LIB_PATHS})
 ELSEIF(APPLE)
         # Mac
         SET(RESOURCE_HANDLER ${CMAKE_CURRENT_SOURCE_DIR}/src/mac/resources.mm)
@@ -68,13 +74,35 @@ IF (APPLE)
     
 ENDIF (APPLE)
 
-#IF (WIN32)
-#    set_target_properties(${PROJECT_NAME}
-#        PROPERTIES
-#            WIN32_EXECUTABLE TRUE)
-#ENDIF (WIN32)
+IF (WIN32)
+    set_target_properties(${PROJECT_NAME}
+        PROPERTIES
+            WIN32_EXECUTABLE FALSE)
 
 
+	set(EXTRA_LIBS sfml-main ${OPENGL_LIBRARIES})
+	# note we can add stuff to ADDITIONAL_MAKE_CLEAN_FILES 
+	string(COMPARE EQUAL ${CMAKE_GENERATOR} "NMake Makefiles" NMAKE)
+	if (NMAKE)
+		add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+			COMMAND echo copying dlls...
+			COMMAND copy ${SFML_INCLUDE_DIR}\\..\\bin\\*.dll .
+			COMMAND echo copying resources... from ${CMAKE_CURRENT_SOURCE_DIR}
+			COMMAND -mkdir resources 
+			COMMAND copy \"${CMAKE_CURRENT_SOURCE_DIR}\\assets\\*.*\" resources)
+	else ()
+		add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+			COMMAND echo copying dlls...
+			COMMAND copy ${SFML_INCLUDE_DIR}\\..\\bin\\*.dll .
+			COMMAND echo copying resources... from ${CMAKE_CURRENT_SOURCE_DIR}
+			# Visual Studio does not support the '-' to ignore errors
+			COMMAND rmdir /s /q resources
+			COMMAND mkdir resources 
+			COMMAND copy \"${CMAKE_CURRENT_SOURCE_DIR}\\assets\\*.*\" resources)
+	endif (NMAKE)
+ENDIF (WIN32)
+
+#if (APPLE)
 target_link_libraries(${PROJECT_NAME} 
     sfml-system 
     sfml-window
@@ -82,3 +110,4 @@ target_link_libraries(${PROJECT_NAME}
     sfml-graphics
     sfml-audio
     ${EXTRA_LIBS})
+#endif (APPLE)
