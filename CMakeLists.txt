@@ -36,22 +36,16 @@ ENDIF()
 
 include_directories(${SFML_INCLUDE_DIR})
 
-SET(RESOURCES   ${CMAKE_CURRENT_SOURCE_DIR}/assets/background.jpg 
-			    ${CMAKE_CURRENT_SOURCE_DIR}/assets/blur.sfx
-				${CMAKE_CURRENT_SOURCE_DIR}/assets/colorize.sfx
-				${CMAKE_CURRENT_SOURCE_DIR}/assets/edge.sfx
-				${CMAKE_CURRENT_SOURCE_DIR}/assets/fisheye.sfx
-				${CMAKE_CURRENT_SOURCE_DIR}/assets/nothing.sfx
-				${CMAKE_CURRENT_SOURCE_DIR}/assets/pixelate.sfx
-				${CMAKE_CURRENT_SOURCE_DIR}/assets/sansation.ttf
-				${CMAKE_CURRENT_SOURCE_DIR}/assets/sprite.png
-				${CMAKE_CURRENT_SOURCE_DIR}/assets/wave.jpg
-				${CMAKE_CURRENT_SOURCE_DIR}/assets/wave.sfx)
+SET(RESOURCES   ${CMAKE_CURRENT_SOURCE_DIR}/assets/vertex.sfx
+			    ${CMAKE_CURRENT_SOURCE_DIR}/assets/fragment.sfx)
 
 
-SET (SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/Shader.cpp)
+#SET (SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/Shader.cpp)
 #SET (HEADERS include/resources.h)
 
+#SET (CMAKE_CXX_FLAGS "-std=c++0x")
+SET (SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/Triangle.cpp
+			${CMAKE_CURRENT_SOURCE_DIR}/src/Shader.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${RESOURCE_HANDLER})
 
