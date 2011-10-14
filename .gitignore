@@ -1,0 +1,8 @@
+.DS_Store
+glfw-src/.DS_Store
+*.xcodeproj/*.mode2v3
+*.xcodeproj/*.pbxuser
+*.xcodeproj/xcuserdata/*
+*.xcodeproj/xcuserdata/*.xcuserdatad
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+build/*
