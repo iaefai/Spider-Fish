@@ -10,6 +10,8 @@
 #include "EnemyData.h"
 #include "EnemyShip.h"
 
+#include "resources.h"
+
 SpiderFishGame::SpiderFishGame() :
   Game( "Spider-Fish", 600, 420 )
 {
@@ -19,7 +21,7 @@ SpiderFishGame::SpiderFishGame() :
 
 void SpiderFishGame::loadEnemyList()
 {
-  std::ifstream fin( lvl_resource( "level1.dat" ) );
+  std::ifstream fin( resourcePathFor( "level1.dat" ).c_str() );
   Uint32 time;
   int x;
   int type;

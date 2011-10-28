@@ -5,7 +5,7 @@
 
 #include "SDL.h"
 
-#include "SpiderFish.h"
+#include "SpiderFishGame.h"
 #include "Sprite.h"
 #include "PhysicalEntity.h"
 

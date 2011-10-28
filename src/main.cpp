@@ -1,6 +1,8 @@
 #include "SpiderFish.h"
 #include "SpiderFishGame.h"
 
+//#include "SDLMain.h"
+
 int main(int argc, char * args[])
 {
   SpiderFishGame game;

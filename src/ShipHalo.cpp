@@ -3,9 +3,11 @@
 #include "Game.h"
 #include "SpiderFish.h"
 
+#include "resources.h"
+
 ShipHalo::ShipHalo( Game* owner, float rad , int x, int y ):
   PhysicalEntity( owner,
-                  owner->imageManager.createImage( img_resource( "circle.png" ) ),
+                  owner->imageManager.createImage( resourcePathFor( "circle.png" ) ),
                   0, 0, x, y ),
   _rad( rad )
 {

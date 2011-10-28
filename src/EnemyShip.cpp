@@ -1,9 +1,13 @@
+
+
 #include "EnemyShip.h"
 #include "EnemyPeeShooter.h"
 
+#include "resources.h"
+
 EnemyShip::EnemyShip(Game* owner,int x,int y):
   Ship(owner,
-       owner->imageManager.createImage(img_resource("enemy.png")),
+       owner->imageManager.createImage(resourcePathFor("enemy.png")),
        x,y)
 {
   _weapon = new EnemyPeeShooter(owner, this);

@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76E73FA9145B4DCB00695ACE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E73FA8145B4DCB00695ACE /* Cocoa.framework */; };
+		76E73FB3145B4DCB00695ACE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76E73FB1145B4DCB00695ACE /* InfoPlist.strings */; };
+		76E73FB9145B4DCB00695ACE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 76E73FB7145B4DCB00695ACE /* Credits.rtf */; };
+		76E73FD7145B4EAC00695ACE /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FC5145B4EAC00695ACE /* Bullet.cpp */; };
+		76E73FD8145B4EAC00695ACE /* EnemyData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FC6145B4EAC00695ACE /* EnemyData.cpp */; };
+		76E73FD9145B4EAC00695ACE /* EnemyPeeShooter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FC7145B4EAC00695ACE /* EnemyPeeShooter.cpp */; };
+		76E73FDA145B4EAC00695ACE /* EnemyShip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FC8145B4EAC00695ACE /* EnemyShip.cpp */; };
+		76E73FDB145B4EAC00695ACE /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FC9145B4EAC00695ACE /* Game.cpp */; };
+		76E73FDC145B4EAC00695ACE /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FCA145B4EAC00695ACE /* GameObject.cpp */; };
+		76E73FDD145B4EAC00695ACE /* ImageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FCB145B4EAC00695ACE /* ImageManager.cpp */; };
+		76E73FDE145B4EAC00695ACE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FCC145B4EAC00695ACE /* main.cpp */; };
+		76E73FDF145B4EAC00695ACE /* OrbBullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FCD145B4EAC00695ACE /* OrbBullet.cpp */; };
+		76E73FE0145B4EAC00695ACE /* PhysicalEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FCE145B4EAC00695ACE /* PhysicalEntity.cpp */; };
+		76E73FE1145B4EAC00695ACE /* PlayerShip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FCF145B4EAC00695ACE /* PlayerShip.cpp */; };
+		76E73FE2145B4EAC00695ACE /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FD0145B4EAC00695ACE /* Ship.cpp */; };
+		76E73FE3145B4EAC00695ACE /* ShipHalo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FD1145B4EAC00695ACE /* ShipHalo.cpp */; };
+		76E73FE4145B4EAC00695ACE /* SingleShooter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FD2145B4EAC00695ACE /* SingleShooter.cpp */; };
+		76E73FE5145B4EAC00695ACE /* SpiderFishGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FD3145B4EAC00695ACE /* SpiderFishGame.cpp */; };
+		76E73FE6145B4EAC00695ACE /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FD4145B4EAC00695ACE /* Sprite.cpp */; };
+		76E73FE8145B4EAC00695ACE /* Weapon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FD6145B4EAC00695ACE /* Weapon.cpp */; };
+		76E73FEE145B4EEC00695ACE /* libSDL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E73FE9145B4EEC00695ACE /* libSDL.dylib */; };
+		76E73FEF145B4EEC00695ACE /* libSDL_gfx.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E73FEA145B4EEC00695ACE /* libSDL_gfx.dylib */; };
+		76E73FF0145B4EEC00695ACE /* libSDL_image.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E73FEB145B4EEC00695ACE /* libSDL_image.dylib */; };
+		76E73FF1145B4EEC00695ACE /* libSDL_mixer.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E73FEC145B4EEC00695ACE /* libSDL_mixer.dylib */; };
+		76E73FF2145B4EEC00695ACE /* libSDL_ttf.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E73FED145B4EEC00695ACE /* libSDL_ttf.dylib */; };
+		76E73FF4145B4EFD00695ACE /* libSDL.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76E73FE9145B4EEC00695ACE /* libSDL.dylib */; };
+		76E73FF5145B4F0000695ACE /* libSDL_gfx.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76E73FEA145B4EEC00695ACE /* libSDL_gfx.dylib */; };
+		76E73FF6145B4F0200695ACE /* libSDL_image.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76E73FEB145B4EEC00695ACE /* libSDL_image.dylib */; };
+		76E73FF7145B4F0500695ACE /* libSDL_mixer.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76E73FEC145B4EEC00695ACE /* libSDL_mixer.dylib */; };
+		76E73FF8145B4F0700695ACE /* libSDL_ttf.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76E73FED145B4EEC00695ACE /* libSDL_ttf.dylib */; };
+		76E73FFA145B568100695ACE /* resources.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76E73FF9145B568100695ACE /* resources.mm */; };
+		76E74004145B59A700695ACE /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E73FFC145B59A700695ACE /* bullet.png */; };
+		76E74005145B59A700695ACE /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E73FFD145B59A700695ACE /* circle.png */; };
+		76E74006145B59A700695ACE /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E73FFE145B59A700695ACE /* enemy.png */; };
+		76E74007145B59A700695ACE /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E73FFF145B59A700695ACE /* ship.png */; };
+		76E74008145B59A700695ACE /* spaceship-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E74000145B59A700695ACE /* spaceship-large.png */; };
+		76E74009145B59A700695ACE /* leveGen.py in Resources */ = {isa = PBXBuildFile; fileRef = 76E74002145B59A700695ACE /* leveGen.py */; };
+		76E7400A145B59A700695ACE /* level1.dat in Resources */ = {isa = PBXBuildFile; fileRef = 76E74003145B59A700695ACE /* level1.dat */; };
+		76E74014145B5A8200695ACE /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E74013145B5A8100695ACE /* SDLMain.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76E73FF3145B4EF300695ACE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				76E73FF4145B4EFD00695ACE /* libSDL.dylib in CopyFiles */,
+				76E73FF8145B4F0700695ACE /* libSDL_ttf.dylib in CopyFiles */,
+				76E73FF5145B4F0000695ACE /* libSDL_gfx.dylib in CopyFiles */,
+				76E73FF7145B4F0500695ACE /* libSDL_mixer.dylib in CopyFiles */,
+				76E73FF6145B4F0200695ACE /* libSDL_image.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		76E73FA4145B4DCB00695ACE /* Spider Fish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spider Fish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E73FA8145B4DCB00695ACE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		76E73FAB145B4DCB00695ACE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		76E73FAC145B4DCB00695ACE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		76E73FAD145B4DCB00695ACE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		76E73FB0145B4DCB00695ACE /* Spider Fish-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spider Fish-Info.plist"; sourceTree = "<group>"; };
+		76E73FB2145B4DCB00695ACE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		76E73FB6145B4DCB00695ACE /* Spider Fish-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spider Fish-Prefix.pch"; sourceTree = "<group>"; };
+		76E73FB8145B4DCB00695ACE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		76E73FC5145B4EAC00695ACE /* Bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bullet.cpp; path = ../../../../src/Bullet.cpp; sourceTree = "<group>"; };
+		76E73FC6145B4EAC00695ACE /* EnemyData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnemyData.cpp; path = ../../../../src/EnemyData.cpp; sourceTree = "<group>"; };
+		76E73FC7145B4EAC00695ACE /* EnemyPeeShooter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnemyPeeShooter.cpp; path = ../../../../src/EnemyPeeShooter.cpp; sourceTree = "<group>"; };
+		76E73FC8145B4EAC00695ACE /* EnemyShip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnemyShip.cpp; path = ../../../../src/EnemyShip.cpp; sourceTree = "<group>"; };
+		76E73FC9145B4EAC00695ACE /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../../../../src/Game.cpp; sourceTree = "<group>"; };
+		76E73FCA145B4EAC00695ACE /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameObject.cpp; path = ../../../../src/GameObject.cpp; sourceTree = "<group>"; };
+		76E73FCB145B4EAC00695ACE /* ImageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImageManager.cpp; path = ../../../../src/ImageManager.cpp; sourceTree = "<group>"; };
+		76E73FCC145B4EAC00695ACE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../../src/main.cpp; sourceTree = "<group>"; };
+		76E73FCD145B4EAC00695ACE /* OrbBullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OrbBullet.cpp; path = ../../../../src/OrbBullet.cpp; sourceTree = "<group>"; };
+		76E73FCE145B4EAC00695ACE /* PhysicalEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PhysicalEntity.cpp; path = ../../../../src/PhysicalEntity.cpp; sourceTree = "<group>"; };
+		76E73FCF145B4EAC00695ACE /* PlayerShip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerShip.cpp; path = ../../../../src/PlayerShip.cpp; sourceTree = "<group>"; };
+		76E73FD0145B4EAC00695ACE /* Ship.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Ship.cpp; path = ../../../../src/Ship.cpp; sourceTree = "<group>"; };
+		76E73FD1145B4EAC00695ACE /* ShipHalo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShipHalo.cpp; path = ../../../../src/ShipHalo.cpp; sourceTree = "<group>"; };
+		76E73FD2145B4EAC00695ACE /* SingleShooter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SingleShooter.cpp; path = ../../../../src/SingleShooter.cpp; sourceTree = "<group>"; };
+		76E73FD3145B4EAC00695ACE /* SpiderFishGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpiderFishGame.cpp; path = ../../../../src/SpiderFishGame.cpp; sourceTree = "<group>"; };
+		76E73FD4145B4EAC00695ACE /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sprite.cpp; path = ../../../../src/Sprite.cpp; sourceTree = "<group>"; };
+		76E73FD6145B4EAC00695ACE /* Weapon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Weapon.cpp; path = ../../../../src/Weapon.cpp; sourceTree = "<group>"; };
+		76E73FE9145B4EEC00695ACE /* libSDL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSDL.dylib; path = usr/local/lib/libSDL.dylib; sourceTree = SDKROOT; };
+		76E73FEA145B4EEC00695ACE /* libSDL_gfx.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSDL_gfx.dylib; path = usr/local/lib/libSDL_gfx.dylib; sourceTree = SDKROOT; };
+		76E73FEB145B4EEC00695ACE /* libSDL_image.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSDL_image.dylib; path = usr/local/lib/libSDL_image.dylib; sourceTree = SDKROOT; };
+		76E73FEC145B4EEC00695ACE /* libSDL_mixer.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSDL_mixer.dylib; path = usr/local/lib/libSDL_mixer.dylib; sourceTree = SDKROOT; };
+		76E73FED145B4EEC00695ACE /* libSDL_ttf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSDL_ttf.dylib; path = usr/local/lib/libSDL_ttf.dylib; sourceTree = SDKROOT; };
+		76E73FF9145B568100695ACE /* resources.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = resources.mm; path = ../../../../src/mac/resources.mm; sourceTree = "<group>"; };
+		76E73FFC145B59A700695ACE /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		76E73FFD145B59A700695ACE /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		76E73FFE145B59A700695ACE /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
+		76E73FFF145B59A700695ACE /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
+		76E74000145B59A700695ACE /* spaceship-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spaceship-large.png"; sourceTree = "<group>"; };
+		76E74002145B59A700695ACE /* leveGen.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = leveGen.py; sourceTree = "<group>"; };
+		76E74003145B59A700695ACE /* level1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.dat; sourceTree = "<group>"; };
+		76E74012145B5A8100695ACE /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
+		76E74013145B5A8100695ACE /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76E73FA1145B4DCB00695ACE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E73FEE145B4EEC00695ACE /* libSDL.dylib in Frameworks */,
+				76E73FEF145B4EEC00695ACE /* libSDL_gfx.dylib in Frameworks */,
+				76E73FF0145B4EEC00695ACE /* libSDL_image.dylib in Frameworks */,
+				76E73FF1145B4EEC00695ACE /* libSDL_mixer.dylib in Frameworks */,
+				76E73FF2145B4EEC00695ACE /* libSDL_ttf.dylib in Frameworks */,
+				76E73FA9145B4DCB00695ACE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76E73F99145B4DCB00695ACE = {
+			isa = PBXGroup;
+			children = (
+				76E73FFB145B59A700695ACE /* images */,
+				76E74001145B59A700695ACE /* levels */,
+				76E73FE9145B4EEC00695ACE /* libSDL.dylib */,
+				76E73FEA145B4EEC00695ACE /* libSDL_gfx.dylib */,
+				76E73FEB145B4EEC00695ACE /* libSDL_image.dylib */,
+				76E73FEC145B4EEC00695ACE /* libSDL_mixer.dylib */,
+				76E73FED145B4EEC00695ACE /* libSDL_ttf.dylib */,
+				76E73FAE145B4DCB00695ACE /* Spider Fish */,
+				76E73FA7145B4DCB00695ACE /* Frameworks */,
+				76E73FA5145B4DCB00695ACE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76E73FA5145B4DCB00695ACE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76E73FA4145B4DCB00695ACE /* Spider Fish.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76E73FA7145B4DCB00695ACE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76E73FA8145B4DCB00695ACE /* Cocoa.framework */,
+				76E73FAA145B4DCB00695ACE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76E73FAA145B4DCB00695ACE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76E73FAB145B4DCB00695ACE /* AppKit.framework */,
+				76E73FAC145B4DCB00695ACE /* CoreData.framework */,
+				76E73FAD145B4DCB00695ACE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		76E73FAE145B4DCB00695ACE /* Spider Fish */ = {
+			isa = PBXGroup;
+			children = (
+				76E74012145B5A8100695ACE /* SDLMain.h */,
+				76E74013145B5A8100695ACE /* SDLMain.m */,
+				76E73FF9145B568100695ACE /* resources.mm */,
+				76E73FC5145B4EAC00695ACE /* Bullet.cpp */,
+				76E73FC6145B4EAC00695ACE /* EnemyData.cpp */,
+				76E73FC7145B4EAC00695ACE /* EnemyPeeShooter.cpp */,
+				76E73FC8145B4EAC00695ACE /* EnemyShip.cpp */,
+				76E73FC9145B4EAC00695ACE /* Game.cpp */,
+				76E73FCA145B4EAC00695ACE /* GameObject.cpp */,
+				76E73FCB145B4EAC00695ACE /* ImageManager.cpp */,
+				76E73FCC145B4EAC00695ACE /* main.cpp */,
+				76E73FCD145B4EAC00695ACE /* OrbBullet.cpp */,
+				76E73FCE145B4EAC00695ACE /* PhysicalEntity.cpp */,
+				76E73FCF145B4EAC00695ACE /* PlayerShip.cpp */,
+				76E73FD0145B4EAC00695ACE /* Ship.cpp */,
+				76E73FD1145B4EAC00695ACE /* ShipHalo.cpp */,
+				76E73FD2145B4EAC00695ACE /* SingleShooter.cpp */,
+				76E73FD3145B4EAC00695ACE /* SpiderFishGame.cpp */,
+				76E73FD4145B4EAC00695ACE /* Sprite.cpp */,
+				76E73FD6145B4EAC00695ACE /* Weapon.cpp */,
+				76E73FAF145B4DCB00695ACE /* Supporting Files */,
+			);
+			path = "Spider Fish";
+			sourceTree = "<group>";
+		};
+		76E73FAF145B4DCB00695ACE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76E73FB0145B4DCB00695ACE /* Spider Fish-Info.plist */,
+				76E73FB1145B4DCB00695ACE /* InfoPlist.strings */,
+				76E73FB6145B4DCB00695ACE /* Spider Fish-Prefix.pch */,
+				76E73FB7145B4DCB00695ACE /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76E73FFB145B59A700695ACE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				76E73FFC145B59A700695ACE /* bullet.png */,
+				76E73FFD145B59A700695ACE /* circle.png */,
+				76E73FFE145B59A700695ACE /* enemy.png */,
+				76E73FFF145B59A700695ACE /* ship.png */,
+				76E74000145B59A700695ACE /* spaceship-large.png */,
+			);
+			name = images;
+			path = ../../../resources/images;
+			sourceTree = "<group>";
+		};
+		76E74001145B59A700695ACE /* levels */ = {
+			isa = PBXGroup;
+			children = (
+				76E74002145B59A700695ACE /* leveGen.py */,
+				76E74003145B59A700695ACE /* level1.dat */,
+			);
+			name = levels;
+			path = ../../../resources/levels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76E73FA3145B4DCB00695ACE /* Spider Fish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76E73FC2145B4DCB00695ACE /* Build configuration list for PBXNativeTarget "Spider Fish" */;
+			buildPhases = (
+				76E73FA0145B4DCB00695ACE /* Sources */,
+				76E73FA1145B4DCB00695ACE /* Frameworks */,
+				76E73FA2145B4DCB00695ACE /* Resources */,
+				76E73FF3145B4EF300695ACE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spider Fish";
+			productName = "Spider Fish";
+			productReference = 76E73FA4145B4DCB00695ACE /* Spider Fish.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76E73F9B145B4DCB00695ACE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 76E73F9E145B4DCB00695ACE /* Build configuration list for PBXProject "Spider Fish" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 76E73F99145B4DCB00695ACE;
+			productRefGroup = 76E73FA5145B4DCB00695ACE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76E73FA3145B4DCB00695ACE /* Spider Fish */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76E73FA2145B4DCB00695ACE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E73FB3145B4DCB00695ACE /* InfoPlist.strings in Resources */,
+				76E73FB9145B4DCB00695ACE /* Credits.rtf in Resources */,
+				76E74004145B59A700695ACE /* bullet.png in Resources */,
+				76E74005145B59A700695ACE /* circle.png in Resources */,
+				76E74006145B59A700695ACE /* enemy.png in Resources */,
+				76E74007145B59A700695ACE /* ship.png in Resources */,
+				76E74008145B59A700695ACE /* spaceship-large.png in Resources */,
+				76E74009145B59A700695ACE /* leveGen.py in Resources */,
+				76E7400A145B59A700695ACE /* level1.dat in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76E73FA0145B4DCB00695ACE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E73FD7145B4EAC00695ACE /* Bullet.cpp in Sources */,
+				76E73FD8145B4EAC00695ACE /* EnemyData.cpp in Sources */,
+				76E73FD9145B4EAC00695ACE /* EnemyPeeShooter.cpp in Sources */,
+				76E73FDA145B4EAC00695ACE /* EnemyShip.cpp in Sources */,
+				76E73FDB145B4EAC00695ACE /* Game.cpp in Sources */,
+				76E73FDC145B4EAC00695ACE /* GameObject.cpp in Sources */,
+				76E73FDD145B4EAC00695ACE /* ImageManager.cpp in Sources */,
+				76E73FDE145B4EAC00695ACE /* main.cpp in Sources */,
+				76E73FDF145B4EAC00695ACE /* OrbBullet.cpp in Sources */,
+				76E73FE0145B4EAC00695ACE /* PhysicalEntity.cpp in Sources */,
+				76E73FE1145B4EAC00695ACE /* PlayerShip.cpp in Sources */,
+				76E73FE2145B4EAC00695ACE /* Ship.cpp in Sources */,
+				76E73FE3145B4EAC00695ACE /* ShipHalo.cpp in Sources */,
+				76E73FE4145B4EAC00695ACE /* SingleShooter.cpp in Sources */,
+				76E73FE5145B4EAC00695ACE /* SpiderFishGame.cpp in Sources */,
+				76E73FE6145B4EAC00695ACE /* Sprite.cpp in Sources */,
+				76E73FE8145B4EAC00695ACE /* Weapon.cpp in Sources */,
+				76E73FFA145B568100695ACE /* resources.mm in Sources */,
+				76E74014145B5A8200695ACE /* SDLMain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		76E73FB1145B4DCB00695ACE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76E73FB2145B4DCB00695ACE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		76E73FB7145B4DCB00695ACE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76E73FB8145B4DCB00695ACE /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76E73FC0145B4DCB00695ACE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		76E73FC1145B4DCB00695ACE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		76E73FC3145B4DCB00695ACE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spider Fish/Spider Fish-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../../include\"",
+					/usr/local/include/SDL,
+				);
+				INFOPLIST_FILE = "Spider Fish/Spider Fish-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../include\"";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		76E73FC4145B4DCB00695ACE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spider Fish/Spider Fish-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../../include\"",
+					/usr/local/include/SDL,
+				);
+				INFOPLIST_FILE = "Spider Fish/Spider Fish-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../include\"";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76E73F9E145B4DCB00695ACE /* Build configuration list for PBXProject "Spider Fish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76E73FC0145B4DCB00695ACE /* Debug */,
+				76E73FC1145B4DCB00695ACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76E73FC2145B4DCB00695ACE /* Build configuration list for PBXNativeTarget "Spider Fish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76E73FC3145B4DCB00695ACE /* Debug */,
+				76E73FC4145B4DCB00695ACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76E73F9B145B4DCB00695ACE /* Project object */;
+}

@@ -1,6 +1,8 @@
 // C++
 #include <string>
 
+
+
 // SDL
 #include "SDL.h"
 #include "SDL_ttf.h"
@@ -11,6 +13,8 @@
 #include "Game.h"
 #include "SpiderFish.h"
 #include "GameObject.h"
+
+
 
 Game::Game( std::string title, int width, int height ):
   imageManager(),

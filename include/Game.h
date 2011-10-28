@@ -10,7 +10,7 @@
 #include "SDL.h"
 
 // Engine
-#include "SpiderFish.h"
+#include "Game.h"
 #include "ImageManager.h"
 
 class GameObject;

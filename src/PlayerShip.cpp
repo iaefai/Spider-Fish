@@ -8,11 +8,13 @@
 #include "SpiderFish.h"
 #include "SingleShooter.h"
 
+#include "resources.h"
+
 const float PlayerShip::SPEED = 200; // pixels/sec
 
 PlayerShip::PlayerShip( Game* owner, int x, int y ):
   Ship( owner,
-        owner->imageManager.createImage( img_resource( "ship.png" ) ),
+        owner->imageManager.createImage( resourcePathFor( "ship.png" ) ),
         x, y
       ),
   _halo( owner, 100, x, y )

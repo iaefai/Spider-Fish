@@ -12,8 +12,9 @@
 #include <string>
 #include <map>
 
+#include "resources.h"
+
 // Engine
-#include "Types.h"
 class Sprite; // Forward declaration, acts like including the header
 
 typedef std::map<const uint, Sprite* const> SpriteMap;

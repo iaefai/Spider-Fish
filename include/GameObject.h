@@ -5,7 +5,7 @@
 #include "SDL.h"
 
 // Engine
-#include "SpiderFish.h"
+#include "SpiderFishGame.h"
 
 class Game;
 

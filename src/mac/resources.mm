@@ -11,7 +11,7 @@
 #include <string>
 #include <iostream>
 
-#include "../resources.h"
+#include "resources.h"
 
 std::string resourcePathFor(const std::string &name) 
 {
